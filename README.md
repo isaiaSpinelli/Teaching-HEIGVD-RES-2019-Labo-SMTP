@@ -1,4 +1,4 @@
-# laboratoire RES SMTP
+# Laboratoire RES SMTP
 
 ## Description
 Dans le cadre d'un cours à l'HEIG-VD, nous devons implémenter un client SMTP qui permet de faire des pranks par emails.
