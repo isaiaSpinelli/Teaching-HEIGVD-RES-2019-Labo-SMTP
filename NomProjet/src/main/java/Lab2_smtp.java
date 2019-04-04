@@ -33,7 +33,14 @@ public class Lab2_smtp {
 		 String msg = "tg";
 
 		// BufferedReader msg;
-		File file = new File("message.txt");
+		File file = new File("message.utf8");
+        try {
+            Reader reader = new InputStreamReader(new FileInputStream(file), "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
 		/*FileReader msgFileReader = null;
 		try {
 			msgFileReader = new FileReader(file);
