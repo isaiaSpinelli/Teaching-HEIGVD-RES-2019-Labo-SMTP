@@ -1,6 +1,5 @@
 package model.prank;
 
-import model.mail.Mail;
 import model.mail.Message;
 import model.mail.Person;
 
@@ -46,14 +45,14 @@ public class Prank {
         return witnessRecipients;
     }
 
-    public ArrayList<Mail> generateMailMessage(){
+    public ArrayList<Message> generateMailMessage(){
         // Add name of sender
         String body = this.message + "\r\n" ;
 
-        ArrayList<Mail> mails = new ArrayList<Mail>( );
+        ArrayList<Message> mails = new ArrayList<Message>( );
         // add CC
         for(Person victimRecipient : victimRecipients){
-            mails.add( new Mail( victimSender.getMail(), victimRecipient.getMail(), body) );
+            mails.add( new Message( victimSender.getMail(), victimRecipient.getMail(), body) );
         }
 
         return mails;

@@ -4,7 +4,13 @@ import java.util.ArrayList;
 
 public class Group {
 
-    ArrayList<Person> receptionists = new ArrayList<Person>();
-    Person sender;
+    private final ArrayList<Person> members = new ArrayList<Person>();
 
+    public ArrayList<Person> getMembers() {
+        return members;
+    }
+
+    public void addMember(Person person) {
+        this.members.add( person ) ;
+    }
 }

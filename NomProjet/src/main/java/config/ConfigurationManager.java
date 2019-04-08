@@ -93,4 +93,8 @@ public class ConfigurationManager {
 
 
     }
+
+    public int getNbGroups() {
+        return nbGroups;
+    }
 }
