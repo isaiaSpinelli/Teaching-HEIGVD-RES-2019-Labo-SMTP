@@ -19,8 +19,6 @@ public class SmtpClient implements ISmtpClient{
         OutputStream os = null;
         InputStream is = null;
 
-        LOG.log( Level.INFO, "1");
-
         try {
             clientSocket = new Socket(smtpServeurAdresse, smtpServeurPort);
             os = clientSocket.getOutputStream();

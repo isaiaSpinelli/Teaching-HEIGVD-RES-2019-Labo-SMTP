@@ -15,9 +15,14 @@ public class PrankGenerator {
         this.config = config;
     }
 
+    ArrayList<Prank> generatePranks(){
+        return new ArrayList<Prank>( );
+    }
 
     ArrayList<Group> generateGroups(ArrayList<Person> victims, int nbOfGroups){
         return new ArrayList<Group>( );
     }
+
+
 
 }

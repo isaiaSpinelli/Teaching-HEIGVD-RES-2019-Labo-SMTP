@@ -2,9 +2,11 @@ package model.mail;
 
 public class Message {
 
+    // Add CC
     private String from;
     private String to;
     private String msg;
+
 
     public Message(String from, String to, String msg) {
         this.from = from;

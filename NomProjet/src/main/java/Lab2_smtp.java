@@ -30,9 +30,6 @@ public class Lab2_smtp {
 		// System.setProperty("java.util.logging.SimpleFormatter.format", "%5$s %n");
 
 
-		Message messages = new Message();
-
-		Person presons = new Person();
 
 
 
