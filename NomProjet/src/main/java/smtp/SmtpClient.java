@@ -1,20 +1,20 @@
 package smtp;
 
-import model.mail.Message;
+import model.mail.Mail;
 
 import java.io.*;
 import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class SmtpClient {
+public class SmtpClient implements ISmtpClient{
 
     static final Logger LOG = Logger.getLogger( SmtpClient.class.getName());
 
     private String smtpServeurAdresse = "127.0.0.1";
     private int smtpServeurPort = 25 ;
 
-    public void SendMail (Message message){
+    public void SendMail (Mail mail){
         Socket clientSocket = null;
         OutputStream os = null;
         InputStream is = null;
@@ -49,14 +49,14 @@ public class SmtpClient {
             System.out.println(config);
 
             // Config le from
-            System.out.println("MAIL From:<" + message.getFrom() + ">");
-            out.println("MAIL From:<" + message.getFrom() + ">");
+            System.out.println("MAIL From:<" + mail.getFrom() + ">");
+            out.println("MAIL From:<" + mail.getFrom() + ">");
             String senderOK = in.readLine();
             System.out.println(senderOK);
 
             // Config le receptionneur
-            System.out.println("RCPT TO:<" + message.getTo() + ">");
-            out.println("RCPT TO:<" + message.getTo() + ">");
+            System.out.println("RCPT TO:<" + mail.getTo() + ">");
+            out.println("RCPT TO:<" + mail.getTo() + ">");
             String recipientOK = in.readLine();
             System.out.println(recipientOK);
 
@@ -68,7 +68,7 @@ public class SmtpClient {
             System.out.println(readyData);
 
             // Fin du message intégré dans le message
-            out.println(message.getMsg());
+            out.println(mail.getMsg());
             System.out.println("envoyer");
 
 
@@ -110,7 +110,7 @@ public class SmtpClient {
         System.setProperty("java.util.logging.SimpleFormatter.format", "%5$s %n");
 
         SmtpClient client = new SmtpClient();
-        Message mailTosend = new Message( "tommy@sd.com", "isaia@sd.com", "u want sum phoque ?\nNice frère\r\n.\r\n" );
+        Mail mailTosend = new Mail( "tommy@sd.com", "isaia@sd.com", "u want sum phoque ?\nNice frère\r\n.\r\n" );
         client.SendMail(mailTosend);
 
     }

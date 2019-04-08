@@ -2,6 +2,7 @@
 
 
 import model.mail.Message;
+import model.mail.Person;
 import smtp.SmtpClient;
 
 import java.io.*;
@@ -26,14 +27,15 @@ public class Lab2_smtp {
 	 * @param args the command line arguments
 	 */
 	public static void main(String[] args) {
-		System.setProperty("java.util.logging.SimpleFormatter.format", "%5$s %n");
+		// System.setProperty("java.util.logging.SimpleFormatter.format", "%5$s %n");
 
 
-		
+		Message messages = new Message();
 
-		SmtpClient client = new SmtpClient();
-		Message mailTosend = new Message( "tommy@sd.com", "isaia@sd.com", "u want sum phoque ?\nNice frère\r\n.\r\n" );
-		client.SendMail(mailTosend);
+		Person presons = new Person();
+
+
+
 
 	}
 
