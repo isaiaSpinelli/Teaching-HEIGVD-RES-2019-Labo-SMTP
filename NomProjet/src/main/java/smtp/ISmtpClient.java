@@ -1,9 +1,9 @@
 package smtp;
 
-import model.mail.Mail;
+import model.mail.Message;
 
 public interface ISmtpClient {
 
-    public void SendMail(Mail mail);
+    public void SendMail(Message mail);
 
 }

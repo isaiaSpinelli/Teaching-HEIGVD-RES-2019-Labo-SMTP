@@ -1,12 +1,16 @@
 
 
 
+import config.ConfigurationManager;
 import model.mail.Message;
 import model.mail.Person;
+import model.prank.Prank;
+import model.prank.PrankGenerator;
 import smtp.SmtpClient;
 
 import java.io.*;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -29,10 +33,23 @@ public class Lab2_smtp {
 	public static void main(String[] args) {
 		// System.setProperty("java.util.logging.SimpleFormatter.format", "%5$s %n");
 
+		// Get configuration
+		ConfigurationManager config = null;
+		try {
+			config = new ConfigurationManager();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		// Get client
+		SmtpClient client = new SmtpClient(config.getSmtpServeurAddress(), config.getSmtpServeurPort());
 
 
+		PrankGenerator generator = new PrankGenerator(config);
+		ArrayList<Prank> pranks = generator.generatePranks();
 
-
+		for (Prank prank : pranks) {
+			client.SendMail( prank.generateMailMessage() );
+		}
 
 	}
 

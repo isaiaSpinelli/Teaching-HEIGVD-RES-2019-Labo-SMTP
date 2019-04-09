@@ -4,6 +4,8 @@ import model.mail.Message;
 import model.mail.Person;
 
 import java.util.ArrayList;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class Prank {
 
@@ -45,17 +47,38 @@ public class Prank {
         return witnessRecipients;
     }
 
-    public ArrayList<Message> generateMailMessage(){
-        // Add name of sender
-        String body = this.message + "\r\n" ;
+    public Message generateMailMessage(){
+        Message message = new Message();
 
-        ArrayList<Message> mails = new ArrayList<Message>( );
-        // add CC
-        for(Person victimRecipient : victimRecipients){
-            mails.add( new Message( victimSender.getMail(), victimRecipient.getMail(), body) );
+        // Message
+        message.setMsg( this.message + "\r\n" + this.victimSender.getFirstName() );
+
+        // To
+        int size = victimRecipients.size();
+        String[] to = new String[size];
+
+        int i = 0;
+        for (Person victim : victimRecipients){
+            to[i] = victim.getMail();
         }
 
-        return mails;
+        message.setTo( to );
+
+        // CC
+        int size2 = witnessRecipients.size();
+        String[] cc = new String[size];
+
+        int k = 0;
+        for (Person witness : witnessRecipients){
+            to[k] = witness.getMail();
+        }
+
+        message.setCc( cc );
+
+        // From
+        message.setFrom( victimSender.getMail() );
+
+        return message;
     }
 
 }

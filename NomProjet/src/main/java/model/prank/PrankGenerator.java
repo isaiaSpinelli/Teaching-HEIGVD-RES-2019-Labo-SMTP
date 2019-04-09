@@ -21,7 +21,7 @@ public class PrankGenerator {
         this.config = config;
     }
 
-    ArrayList<Prank> generatePranks(){
+    public ArrayList<Prank> generatePranks(){
         ArrayList<Prank> pranks = new ArrayList<Prank>();
 
         ArrayList<String> messages = config.getMessages();

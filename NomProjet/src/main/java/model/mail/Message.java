@@ -50,4 +50,12 @@ public class Message {
     public void setTo(String[] to) {
         this.to = to;
     }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public void setFrom(String from) {
+        this.from = from;
+    }
 }

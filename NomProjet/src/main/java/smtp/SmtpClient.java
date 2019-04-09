@@ -1,6 +1,6 @@
 package smtp;
 
-import model.mail.Mail;
+import model.mail.Message;
 
 import java.io.*;
 import java.net.Socket;
@@ -14,7 +14,16 @@ public class SmtpClient implements ISmtpClient{
     private String smtpServeurAdresse = "127.0.0.1";
     private int smtpServeurPort = 25 ;
 
-    public void SendMail (Mail mail){
+    public SmtpClient(String smtpServeurAdresse, int smtpServeurPort ){
+        this.smtpServeurAdresse = smtpServeurAdresse;
+        this.smtpServeurPort = smtpServeurPort;
+    }
+
+    SmtpClient(){
+
+    }
+
+    public void SendMail (Message mail){
         Socket clientSocket = null;
         OutputStream os = null;
         InputStream is = null;
@@ -50,23 +59,68 @@ public class SmtpClient implements ISmtpClient{
             System.out.println("MAIL From:<" + mail.getFrom() + ">");
             out.println("MAIL From:<" + mail.getFrom() + ">");
             String senderOK = in.readLine();
-            System.out.println(senderOK);
+            LOG.info(senderOK);
 
-            // Config le receptionneur
+            // Config les receptionneurs
+            for (String to : mail.getTo()){
+                out.println("RCPT TO:<" + to + ">");
+                String recipientOK = in.readLine();
+                LOG.info(senderOK);
+            }
+            out.flush();
+
+            // Config les CC
+            for (String cc : mail.getCc()){
+                out.println("RCPT TO:<" + cc + ">");
+                String recipientOK = in.readLine();
+                LOG.info(senderOK);
+            }
+            out.flush();
+
+            // Config les BCC
+            for (String bcc : mail.getCc()){
+                out.println("RCPT TO:<" + bcc + ">");
+                String recipientOK = in.readLine();
+                LOG.info(senderOK);
+            }
+            out.flush();
+/*
             System.out.println("RCPT TO:<" + mail.getTo() + ">");
             out.println("RCPT TO:<" + mail.getTo() + ">");
             String recipientOK = in.readLine();
-            System.out.println(recipientOK);
+            System.out.println(recipientOK);*/
 
             // Config les data
             System.out.println("DATA");
             out.println("DATA");
-
             String readyData = in.readLine();
             System.out.println(readyData);
 
-            // Fin du message intégré dans le message
+            // Construction du message (DATA)
+            // en-tete
+            out.write( "Content-Type: text/plain; charset=\"utf-8\"\r\n" );
+            // From
+            out.write( "From: " + mail.getFrom() + "\r\n" );
+            // To
+            out.write( "To: " + mail.getTo()[0] );
+            for (int i =1; i < mail.getTo().length;++i){
+                out.write( ", " + mail.getTo()[i] );
+            }
+            out.write( "\r\n" );
+            // CC
+            if (mail.getCc().length != 0){
+                out.write( "Cc: " + mail.getCc()[0] );
+                for (int i =1; i < mail.getCc().length;++i){
+                    out.write( ", " + mail.getCc()[i] );
+                }
+                out.write( "\r\n" );
+                out.flush();
+            }
+
+
+
             out.println(mail.getMsg());
+
             System.out.println("envoyer");
 
 
@@ -108,8 +162,14 @@ public class SmtpClient implements ISmtpClient{
         System.setProperty("java.util.logging.SimpleFormatter.format", "%5$s %n");
 
         SmtpClient client = new SmtpClient();
-        Mail mailTosend = new Mail( "tommy@sd.com", "isaia@sd.com", "u want sum phoque ?\nNice frère\r\n.\r\n" );
-        client.SendMail(mailTosend);
+        Message message = new Message();
+        message.setFrom( "tommy@sd.com" );
+        String[] to = {"isaia@sd.com"};
+        message.setTo( to );
+        String[] cc = {"isaia.spinelli@heig-vd.ch"};
+        message.setTo( cc );
+        message.setMsg( "Subject : Hi!\r\nu want sum phoque ?\nNice frère\r\n.\r\n" );
+        client.SendMail(message);
 
     }
 

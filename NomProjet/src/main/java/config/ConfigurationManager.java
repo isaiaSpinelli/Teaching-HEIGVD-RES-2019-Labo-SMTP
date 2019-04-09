@@ -97,4 +97,12 @@ public class ConfigurationManager {
     public int getNbGroups() {
         return nbGroups;
     }
+
+    public String getSmtpServeurAddress() {
+        return smtpServeurAddress;
+    }
+
+    public int getSmtpServeurPort() {
+        return smtpServeurPort;
+    }
 }
