@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dcd42fa1-2dc4-46fb-ac3f-e90a2ce00ee5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/messages.utf8" beforeDir="false" afterPath="$PROJECT_DIR$/config/messages.utf8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lab2_smtp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lab2_smtp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/ConfigurationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/ConfigurationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/prank/Prank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/prank/Prank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/prank/PrankGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/prank/PrankGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/smtp/SmtpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/smtp/SmtpClient.java" afterDir="false" />
-    </list>
+    <list default="true" id="dcd42fa1-2dc4-46fb-ac3f-e90a2ce00ee5" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -420,16 +412,15 @@
       <workItem from="1554707114553" duration="10828000" />
       <workItem from="1554721059129" duration="161000" />
       <workItem from="1554748098260" duration="3692000" />
-      <workItem from="1554801493563" duration="10771000" />
+      <workItem from="1554801493563" duration="11227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33272000" />
+    <option name="totallyTimeSpent" value="33728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2751678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -440,7 +431,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
