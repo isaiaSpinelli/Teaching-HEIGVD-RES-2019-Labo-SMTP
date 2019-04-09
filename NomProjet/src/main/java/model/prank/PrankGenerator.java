@@ -44,6 +44,8 @@ public class PrankGenerator {
             prank.setVictimSender(  victims.remove( 0 ) );
             prank.addVictimRecipients( victims );
 
+            prank.addWitnessRecipients(config.getWitnessesToCC());
+
             prank.setMessage( config.getRandomMessage() );
 
             pranks.add( prank );

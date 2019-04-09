@@ -1,6 +1,5 @@
 package config;
 
-import model.mail.Message;
 import model.mail.Person;
 
 import java.io.*;
@@ -12,13 +11,14 @@ public class ConfigurationManager {
     private String smtpServeurAddress;
     private int smtpServeurPort;
     private final ArrayList<Person> victims;
+    private ArrayList<Person> witnessesToCC;
     private final ArrayList<String> messages;
     private int nbGroups;
 
     public ConfigurationManager() throws IOException {
         victims = loadAddressesFromFile("./config/victimes.utf8");
         messages = loadMessagesFromFile("./config/messages.utf8");
-        loadProperties("./config/victimes.utf8");
+        loadProperties("./config/config.properties");
     }
 
     private void loadProperties(String fileName) throws IOException {
@@ -32,6 +32,12 @@ public class ConfigurationManager {
         this.nbGroups = Integer.parseInt(properties.getProperty( "numberOfGroups" ));
 
         // Get to CC if we have time
+        this.witnessesToCC = new ArrayList<>();
+        String witnesses = properties.getProperty( "witnessesToCC" );
+        String[] witnessesAddresses = witnesses.split( "," );
+        for (String address : witnessesAddresses){
+            this.witnessesToCC.add( new Person( address ) );
+        }
     }
 
     private ArrayList<Person> loadAddressesFromFile(String fileName) throws IOException {
@@ -63,7 +69,7 @@ public class ConfigurationManager {
         while (line != null){
             StringBuilder body = new StringBuilder( );
             // Pour chaque ligne du message
-            while ( (line != null) && (line.equals( ".")) ){
+            while ( (line != null) && !(line.equals( ".")) ){
                 body.append( line + "\r\n");
                 line = reader.readLine();
 
@@ -87,11 +93,11 @@ public class ConfigurationManager {
     }
 
     public String getRandomMessage(){
-        Random rand = new Random();
-        int pos = (rand.nextInt() % messages.size());
-        return messages.get( pos );
+        // Génère un index random plus petit que la size
+        int pos = (int) (Math.random() * ((messages.size()-1) + 1));
 
-
+        //System.out.println( "Nb de pos = " + pos );
+        return messages.get(pos);
     }
 
     public int getNbGroups() {
@@ -104,5 +110,9 @@ public class ConfigurationManager {
 
     public int getSmtpServeurPort() {
         return smtpServeurPort;
+    }
+
+    public ArrayList<Person> getWitnessesToCC(){
+        return this.witnessesToCC;
     }
 }

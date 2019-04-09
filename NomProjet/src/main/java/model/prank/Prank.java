@@ -4,8 +4,6 @@ import model.mail.Message;
 import model.mail.Person;
 
 import java.util.ArrayList;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 
 public class Prank {
 
@@ -59,18 +57,18 @@ public class Prank {
 
         int i = 0;
         for (Person victim : victimRecipients){
-            to[i] = victim.getMail();
+            to[i++] = victim.getMail();
         }
 
         message.setTo( to );
 
         // CC
         int size2 = witnessRecipients.size();
-        String[] cc = new String[size];
+        String[] cc = new String[size2];
 
         int k = 0;
         for (Person witness : witnessRecipients){
-            to[k] = witness.getMail();
+            cc[k++] = witness.getMail();
         }
 
         message.setCc( cc );

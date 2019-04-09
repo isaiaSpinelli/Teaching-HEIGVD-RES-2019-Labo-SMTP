@@ -40,32 +40,31 @@ public class SmtpClient implements ISmtpClient{
                 return ;
             }
 
+            //  Tous les messages recus sont récéptionnés, il est donc possiblde de les vérifer ou les traiter
+
+
             // Lis le message initial
             String initialMessage = in.readLine();
-            System.out.println(initialMessage);
+
             // Envoie le premier message HELO local
-            System.out.println("HELO local");
             out.println("HELO local");
 
             // Lis toute les config du serveur SMTP
             String config = in.readLine();
             while( config.contentEquals("250-") ){
-                System.out.println(config);
+                // System.out.println(config);
                 config = in.readLine();
             }
-            System.out.println(config);
+            // System.out.println(config);
 
             // Config le from
-            System.out.println("MAIL From:<" + mail.getFrom() + ">");
             out.println("MAIL From:<" + mail.getFrom() + ">");
-            String senderOK = in.readLine();
-            LOG.info(senderOK);
+            String OK = in.readLine();
 
             // Config les receptionneurs
             for (String to : mail.getTo()){
                 out.println("RCPT TO:<" + to + ">");
                 String recipientOK = in.readLine();
-                LOG.info(senderOK);
             }
             out.flush();
 
@@ -73,7 +72,6 @@ public class SmtpClient implements ISmtpClient{
             for (String cc : mail.getCc()){
                 out.println("RCPT TO:<" + cc + ">");
                 String recipientOK = in.readLine();
-                LOG.info(senderOK);
             }
             out.flush();
 
@@ -81,20 +79,12 @@ public class SmtpClient implements ISmtpClient{
             for (String bcc : mail.getCc()){
                 out.println("RCPT TO:<" + bcc + ">");
                 String recipientOK = in.readLine();
-                LOG.info(senderOK);
             }
             out.flush();
-/*
-            System.out.println("RCPT TO:<" + mail.getTo() + ">");
-            out.println("RCPT TO:<" + mail.getTo() + ">");
-            String recipientOK = in.readLine();
-            System.out.println(recipientOK);*/
 
             // Config les data
-            System.out.println("DATA");
             out.println("DATA");
             String readyData = in.readLine();
-            System.out.println(readyData);
 
             // Construction du message (DATA)
             // en-tete
@@ -116,23 +106,15 @@ public class SmtpClient implements ISmtpClient{
                 out.write( "\r\n" );
                 out.flush();
             }
-
-
-
+            // Envoie du coprs du message
             out.println(mail.getMsg());
-
-            System.out.println("envoyer");
-
-
+            // Lis la réponse
             String acceptedOK = in.readLine();
-            System.out.println(acceptedOK);
 
             // Quitte
-            System.out.println("QUIT");
             out.println("QUIT");
-
+            // Récupère le bye
             String Bye = in.readLine();
-            System.out.println(Bye);
 
         } catch (IOException ex) {
             LOG.log(Level.SEVERE, null, ex);

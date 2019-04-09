@@ -47,6 +47,8 @@ public class Lab2_smtp {
 		PrankGenerator generator = new PrankGenerator(config);
 		ArrayList<Prank> pranks = generator.generatePranks();
 
+		System.out.println( "Nb de prank = " + pranks.size() );
+
 		for (Prank prank : pranks) {
 			client.SendMail( prank.generateMailMessage() );
 		}
