@@ -2,22 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b9691f7-cf12-4688-8a68-31cb7bcb2dc3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/MockMock/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MockMock/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/Docker_MockMock/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/Docker_MockMock/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/Docker_MockMock/docker/MockMock-1.4.0.one-jar.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/Docker_MockMock/docker/build-image.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/Docker_MockMock/docker/run-container.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/NomProjet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/NomProjet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/NomProjet/target/classes/Lab2_smtp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/NomProjet/target/classes/config/ConfigurationManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/NomProjet/target/classes/model/mail/Group.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/NomProjet/target/classes/model/mail/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/NomProjet/target/classes/model/mail/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/NomProjet/target/classes/model/prank/Prank.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/NomProjet/target/classes/model/prank/PrankGenerator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/NomProjet/target/classes/smtp/ISmtpClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Teaching-HEIGVD-RES-2019-Labo-SMTP/NomProjet/target/classes/smtp/SmtpClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/docker/DockerfileClient/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../Docker_MockMock/docker/DockerfileClient/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/docker/DockerfileClient/NomProjet-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/docker/build-image_client.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Docker_MockMock/docker/build-image_client.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/src/main/java/Lab2_smtp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/src/main/java/config/ConfigurationManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/src/main/java/config/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/src/main/java/config/messages.utf8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/src/main/java/config/victimes.utf8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/src/main/java/model/mail/Group.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/src/main/java/model/mail/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/src/main/java/model/mail/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/src/main/java/model/prank/Prank.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/src/main/java/model/prank/PrankGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/src/main/java/smtp/ISmtpClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/src/main/java/smtp/SmtpClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/target/NomProjet-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/target/classes/Lab2_smtp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/target/classes/config/ConfigurationManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/target/classes/model/mail/Group.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/target/classes/model/mail/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/target/classes/model/mail/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/target/classes/model/prank/Prank.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/target/classes/model/prank/PrankGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/target/classes/smtp/ISmtpClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/target/classes/smtp/SmtpClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Docker_MockMock/src/prankSMTP/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lab2_smtp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/ConfigurationManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/mail/Group.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/mail/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/mail/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/prank/Prank.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/prank/PrankGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/smtp/ISmtpClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/smtp/SmtpClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/prankSMTP-1.0-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,20 +61,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+            <state relative-caret-position="340">
+              <caret line="20" column="61" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Lab2_smtp.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/config/ConfigurationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="53" column="9" selection-start-line="53" selection-start-column="9" selection-end-line="53" selection-end-column="9" />
+            <state relative-caret-position="289">
+              <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,14 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/config/ConfigurationManager.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -179,7 +205,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/MockMock" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -216,7 +242,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,24 +289,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="mail" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="prankSMTP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Labo4_SMTP" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="prank" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="prankSMTP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Labo4_SMTP" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="smtp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -289,9 +296,11 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -345,16 +354,18 @@
       <updated>1554967347127</updated>
       <workItem from="1554967351504" duration="874000" />
       <workItem from="1554968309465" duration="229000" />
+      <workItem from="1554968847609" duration="667000" />
+      <workItem from="1554970588452" duration="150000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1136000" />
+    <option name="totallyTimeSpent" value="1953000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25973153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -363,7 +374,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -396,6 +407,30 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="61" selection-start-line="20" selection-start-column="61" selection-end-line="20" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/config/ConfigurationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -485,23 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/config/ConfigurationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
