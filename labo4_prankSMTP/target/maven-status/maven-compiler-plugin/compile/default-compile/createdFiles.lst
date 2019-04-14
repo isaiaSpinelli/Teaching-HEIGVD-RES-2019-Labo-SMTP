@@ -1,9 +1,0 @@
-model\prank\PrankGenerator.class
-model\mail\Group.class
-model\mail\Person.class
-smtp\ISmtpClient.class
-Lab2_smtp.class
-config\ConfigurationManager.class
-model\prank\Prank.class
-smtp\SmtpClient.class
-model\mail\Message.class
